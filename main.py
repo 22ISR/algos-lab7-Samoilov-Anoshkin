@@ -31,3 +31,52 @@
 
 Пример использования isPalindromString("Madam, Anna went to the civic center") # ["madam", "anna", "civic"]
 """
+Задание 1
+"""
+# def isPalindrom(word):
+#     cleaner_word = word.replace(" ", "").lower()
+#     reversed_word = cleaner_word[::-1]
+#     return reversed_word == cleaner_word
+
+# a = input("Введите слово:")
+# print(isPalindrom(a))
+
+"""
+Задание 2
+"""
+
+# def isPalindrom(words):
+#     cleaner_word = words.replace(" ", "").lower()
+#     reversed_word = cleaner_word[::-1]
+#     return reversed_word == cleaner_word
+
+# def isPalindromList(words):
+#     palindroms = []
+#     for word in words:
+#         if isPalindrom(word):
+#             palindroms.append(word)
+#     return palindroms
+
+# print(isPalindromList([ "level","Hello","город дорог","глаз",]))
+
+"""
+Задание 3
+"""
+def isPalindrom(words):
+    cleaner_word = words.replace(" ", "").lower()
+    reversed_word = cleaner_word[::-1]
+    return reversed_word == cleaner_word
+
+def isPalindromList(words):
+    palindroms = []
+    for word in words:
+        if isPalindrom(word):
+            palindroms.append(word)
+    return palindroms
+
+def isPalindromstring(string):
+    clean_string = punctuation(string)
+    words = clean_string.split()
+    print(words)
+    palindromes = isPalindromList(words)
+    return palindromes
